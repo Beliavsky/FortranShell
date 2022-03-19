@@ -6,7 +6,7 @@ Compile with `gfortran -o fedit.exe xread_code.f90`
 Sample session:
 
 ```
-c:\fortran\test>fedit
+c:\fortran\test>fedit.exe
 > print*,2**10
 > run
         1024
