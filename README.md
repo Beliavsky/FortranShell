@@ -28,6 +28,7 @@ Entering "help" or "h" gives these directions:
  enter a line of Fortran code. Otherwise, ...
  quit or q to quit
  run or r to compile and run executable
+ a line of code terminated by ; causes the program to be compiled and run
  runold or ro to run executable again without recompiling
  compile to compile without running executable
  list or l for a program listing with line numbers
