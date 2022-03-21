@@ -53,6 +53,7 @@ get_line: do
       print*,"del to delete all code; del i to delete line i ; del i j to delete lines i to j"
       print*,"line n <code> to replace the current line n with <code>"
       print*,"insert n <code> to move lines n on down by 1 and put <code> on line n"
+      print*,"imp is expanded to implicit none"
    else if (text == "-") then ! remove last line
       call remove_last(code_buffer)
    else if (text == "-r") then ! remove last line, compile, and run
