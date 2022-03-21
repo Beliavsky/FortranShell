@@ -14,6 +14,12 @@ Sample session:
 > do i=1,4
 > print*,i,i**2
 > end do
+> list
+1: implicit none
+2: integer :: i
+3: do i=1,4
+4: print*,i,i**2
+5: end do
 > run
            1           1
            2           4
