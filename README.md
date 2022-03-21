@@ -34,3 +34,16 @@ Error: Symbol 'k' at (1) has no IMPLICIT type
 > q
 STOP done -- code saved in junk.f90
 ```
+
+```
+ enter a line of Fortran code. Otherwise, ...
+ quit or q to quit
+ run or r to compile and run executable
+ runold or ro to run executable again without recompiling
+ compile to compile without running executable
+ list or l for a program listing with line numbers
+ barelist or bl for a program listing without line numbers
+ del to delete all code; del i to delete line i ; del i j to delete lines i to j
+ line n <code> to replace the current line n with <code>
+ insert n <code> to move lines n on down by 1 and put <code> on line n
+```
