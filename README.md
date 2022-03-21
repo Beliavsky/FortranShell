@@ -6,31 +6,19 @@ Compile with `gfortran -o fedit.exe buffer.f90 xbuffer_code.f90`
 Sample session:
 
 ```
-c:\fortran\test>fedit.exe
-> print*,2**10
+> print*,2**5;
+          32
+> del
+> imp
+> integer :: i
+> do i=1,4
+> print*,i,i**2
+> end do
 > run
-        1024
-> list
- print*,2**10
-> clear
-> list
-> implicit none
-> integer :: i=2,j=5
-> print*,"i,j,i**j=",i,j,i**j
-> run
- i,j,i**j=           2           5          32
-> k = i**j
-> run
-junk.f90:4:1:
-
-    4 | k = i**j
-      | 1
-Error: Symbol 'k' at (1) has no IMPLICIT type
-> list
- implicit none
- integer :: i=2,j=5
- print*,"i,j,i**j=",i,j,i**j
- k = i**j
+           1           1
+           2           4
+           3           9
+           4          16
 > q
 STOP done -- code saved in temp.f90
 ```
