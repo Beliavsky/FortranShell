@@ -10,22 +10,6 @@ program buffer_code
 ! 03/19/2022 06:38 PM branched from xread_code.f90
 ! 03/19/2022 09:45 AM allows the user to run executable again without recompiling
 ! 03/18/2022 10:25 PM read Fortran code from terminal, compile and run it
-! to do:
-!
-! allow code to be run many times -- useful when random numbers used
-! let user include code from another file
-! let user comment out or uncomment a set of lines
-! allow the code to be linked with specified object or library files to create an executable
-! indent code in if blocks and do loops
-! expand p x,y to print*,x,y
-! add end associate statements as needed
-! check if each entered line of code is invalid and reject it if it is -- are there tools for this?
-! let user make a block out of a group of lines
-! allow tools such as Met Office stylist to analyze the code, or other tools to indent it
-! move use statements and declarations with :: automatically to the right place
-! translate to Python
-! allow -n to delete the last n lines of code
-! replace ^ with **
 use buffer_mod, only: buffer,buffer_from_file,write_buffer_to_file,write_buffer, &
                       buffer_outside_range,num_lines,add_line,deallocate,replace_line, &
                       remove_last,last,insert
@@ -67,6 +51,7 @@ get_line: do
       print*,"list or l for a program listing with line numbers"
       print*,"barelist or bl for a program listing without line numbers"
       print*,"del to delete all code; del i to delete line i ; del i j to delete lines i to j"
+      print*,"line n <code> to replace the current line n with <code>"
       print*,"insert n <code> to move lines n on down by 1 and put <code> on line n"
    else if (text == "-") then ! remove last line
       call remove_last(code_buffer)
