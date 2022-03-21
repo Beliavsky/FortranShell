@@ -32,7 +32,7 @@ Error: Symbol 'k' at (1) has no IMPLICIT type
  print*,"i,j,i**j=",i,j,i**j
  k = i**j
 > q
-STOP done -- code saved in junk.f90
+STOP done -- code saved in temp.f90
 ```
 
 Entering "help" or "h" gives these directions:
