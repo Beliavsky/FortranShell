@@ -1,4 +1,6 @@
 program buffer_code
+! 03/21/2022 09:56 AM typing 'compiler' lists the compiler command being used
+! 03/21/2022 09:49 AM allows compiler to be specified as named constant
 ! 03/20/2022 10:15 PM added ability to insert line
 ! 03/20/2022 06:46 PM converts "imp" to "implicit none"
 ! 03/20/2022 06:44 PM use - to delete last line
@@ -14,7 +16,8 @@ use buffer_mod, only: buffer,buffer_from_file,write_buffer_to_file,write_buffer,
                       buffer_outside_range,num_lines,add_line,deallocate,replace_line, &
                       remove_last,last,insert
 implicit none
-character (len=*), parameter :: src="temp.f90", code_end = "end", run_char = ";"
+character (len=*), parameter :: src="temp.f90", code_end = "end", run_char = ";", &
+   compiler_command = "gfortran" ! "ifort -nologo"
 character (len=1000)         :: input_src
 integer, parameter           :: nlen = 132
 character (len=:), allocatable :: new_code_line,executable
@@ -55,6 +58,9 @@ get_line: do
       print*,"line n <code> to replace the current line n with <code>"
       print*,"insert n <code> to move lines n on down by 1 and put <code> on line n"
       print*,"imp is expanded to implicit none"
+      print*,"compiler lists the compiler command being used"
+   else if (text == "compiler") then
+      print*,trim(compiler_command)
    else if (text == "-") then ! remove last line
       call remove_last(code_buffer)
    else if (text == "-r") then ! remove last line, compile, and run
@@ -156,7 +162,7 @@ else
 end if
 open (newunit=ku,file=executable,iostat=stat)
 if (stat == 0) close(ku,status="delete") ! delete executable if it exists
-call execute_command_line("gfortran " // trim(src))
+call execute_command_line(compiler_command // " -o " // trim(executable) // " " // trim(src))
 end subroutine compile
 !
 subroutine run_exec()
