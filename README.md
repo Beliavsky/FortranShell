@@ -47,6 +47,7 @@ Entering "help" or "h" gives these directions:
  del to delete all code; del i to delete line i ; del i j to delete lines i to j
  line n <code> to replace the current line n with <code>
  insert n <code> to move lines n on down by 1 and put <code> on line n
+ imp is expanded to implicit none
 ```
 `fedit.exe foo.f90` pulls in code from `foo.f90`. Otherwise program starts blank. In most cases
 an ```end``` is supplied automatically and need not be supplied by the user.
