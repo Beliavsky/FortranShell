@@ -1,5 +1,5 @@
 # FortranShell
-Windows CMD console program in which to edit, compile, and run Fortran code
+Console program in which to edit, compile, and run Fortran code, tested on Windows and Linux.
 
 Compile with `gfortran -o fedit.exe buffer.f90 xbuffer_code.f90`
 
@@ -48,3 +48,5 @@ Entering "help" or "h" gives these directions:
  line n <code> to replace the current line n with <code>
  insert n <code> to move lines n on down by 1 and put <code> on line n
 ```
+`fedit.exe foo.f90` pulls in code from `foo.f90`. Otherwise program starts blank. In most cases
+an ```end``` is supplied automatically and need not be supplied by the user.
