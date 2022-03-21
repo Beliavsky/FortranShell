@@ -46,6 +46,7 @@ get_line: do
       print*,"enter a line of Fortran code. Otherwise, ..."
       print*,"quit or q to quit"
       print*,"run or r to compile and run executable"
+      print*,"a line of code terminated by ; causes the program to be compiled and run"
       print*,"runold or ro to run executable again without recompiling"
       print*,"compile to compile without running executable"
       print*,"list or l for a program listing with line numbers"
