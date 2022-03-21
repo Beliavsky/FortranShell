@@ -35,6 +35,7 @@ Error: Symbol 'k' at (1) has no IMPLICIT type
 STOP done -- code saved in junk.f90
 ```
 
+Entering "help" or "h" gives these directions:
 ```
  enter a line of Fortran code. Otherwise, ...
  quit or q to quit
