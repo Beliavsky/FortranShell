@@ -1,5 +1,5 @@
 # FortranShell
-Interactve console program in which to edit, compile, and run Fortran code, tested on Windows and Linux.
+Interactive console program in which to edit, compile, and run Fortran code, tested on Windows and Linux.
 
 Compile with `gfortran -o fedit.exe buffer.f90 xbuffer_code.f90`
 
