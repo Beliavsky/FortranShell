@@ -45,5 +45,5 @@ Entering "help" or "h" gives these directions:
  insert n <code> to move lines n on down by 1 and put <code> on line n
  imp is expanded to implicit none
 ```
-`fedit.exe foo.f90` pulls in code from `foo.f90`. Otherwise program starts blank. In most cases
+`fedit.exe foo.f90` pulls in code from `foo.f90`. Otherwise the program starts blank. In most cases
 an ```end``` is supplied automatically and need not be supplied by the user.
